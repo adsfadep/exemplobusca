@@ -6,13 +6,16 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function MainController($timeout, webDevTec, toastr, $http) {
     var vm = this;
+
+    vm.resultado = 0;
 
     vm.awesomeThings = [];
     vm.classAnimation = '';
     vm.creationDate = 1478209187281;
     vm.showToastr = showToastr;
+    vm.somar = somar;
 
     activate();
 
@@ -21,6 +24,18 @@
       $timeout(function() {
         vm.classAnimation = 'rubberBand';
       }, 4000);
+    }
+
+    function somar() {
+        $http.get('http://localhost:8080/HelloWorldWs/ws/teste/somar', {
+            params: {
+                num1: vm.num1,
+                num2: vm.num2
+            }
+        })
+            .success(function(result){
+                vm.resultado = result;
+            })
     }
 
     function showToastr() {
