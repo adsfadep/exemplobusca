@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="webServiceApp">
+<head>
+	<meta charset="utf-8">
+	<title>Despesas Online</title>
+
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+
+	<script type="text/javascript" src="lib/angularjs/angular.min.js"></script>
+	<script type="text/javascript" src="lib/angularjs/angular-locale_pt-br.js"></script>
+
+	<script type="text/javascript" src="js/webServiceCtrl.js"></script>
+
+</head>
+
+<body ng-controller="webServiceCtrl">
+	<div class="jumbotron">
+		<h3>{{nameApp}}</h3>
+		<br>
+		<div class="ip">
+			<label>IP</label>
+			<input class="form-control" type="text" ng-model="ip">
+		</div>
+		<br>
+		<h4>Somar Números</h4>
+		<form class="form-group">
+			<label>Caminho Serviço Web</label>
+			<input class="form-control" type="text" ng-model="servicoSomar" placeholder="Caminho Serviço"/>
+			<br>
+			<input class="form-control" type="number" ng-model="num1" placeholder="Número"/>
+			<input class="form-control" type="number" ng-model="num2" placeholder="Número"/>
+			<button class="btn btn-block btn-primary" type="button" ng-click="somar(num1, num2)">Somar</button>
+			<input class="form-control" type="number" ng-model="resultado" placeholder="Resultado">
+		</form>
+	</div>
+</body>
+</html>
