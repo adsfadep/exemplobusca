@@ -1,27 +1,8 @@
 <div class="container">
-
-  <div>
-    <acme-navbar creation-date="main.creationDate"></acme-navbar>
-  </div>
-
   <div class="jumbotron text-center">
       <input class="form-control" type="text" name="name" ng-model="main.num1">
       <input class="form-control" type="text" name="name" ng-model="main.num2">
       <button type="button" class="btn btn-primary btn-block" ng-click="main.somar()">Somar</button>
       <h2>{{main.resultado}}</h2>
   </div>
-
-  <div class="row">
-    <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in main.awesomeThings | orderBy:'rank'">
-      <div class="thumbnail">
-        <img class="pull-right" ng-src="assets/images/{{ awesomeThing.logo }}" alt="{{ awesomeThing.title }}">
-        <div class="caption">
-          <h3>{{ awesomeThing.title }}</h3>
-          <p>{{ awesomeThing.description }}</p>
-          <p><a ng-href="{{awesomeThing.url}}">{{ awesomeThing.url }}</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </div>
