@@ -33,6 +33,17 @@
 			<button class="btn btn-block btn-primary" type="button" ng-click="somar(num1, num2)">Somar</button>
 			<input class="form-control" type="number" ng-model="resultado" placeholder="Resultado">
 		</form>
+
+		<br>
+		<h4>Ler Arquivo</h4>
+		<form class="form-group">
+			<label>Caminho Serviço Web</label>
+			<input class="form-control" type="text" ng-model="servicoLerArquivo" placeholder="Caminho Serviço"/>
+			<br>
+			<input class="form-control" type="text" ng-model="arquivo" placeholder="Caminho Arquivo"/>
+			<button class="btn btn-block btn-primary" type="button" ng-click="lerArquivo()">Ler Arquivo</button>
+			<textarea class="form-control" ng-model="conteudoArquivo" rows="8" cols="40"></textarea>
+		</form>
 	</div>
 </body>
 </html>
