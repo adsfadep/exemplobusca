@@ -16,8 +16,8 @@ angular.module('webServiceApp').controller('webServiceCtrl', function($scope, $h
 			});
 	}
 
-	$scope.lerArquivo = function() {
-		$http.get('http://' + $scope.ip + $scope.servicoLerArquivo)
+	$scope.lerArquivo = function(arquivo) {
+		$http.get('http://' + $scope.ip + $scope.servicoLerArquivo, {params:{caminhoArquivo:arquivo}})
 			.success(function(resultado) {
 				$scope.conteudoArquivo = resultado;
 			});
